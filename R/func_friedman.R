@@ -98,8 +98,12 @@ friedman = function(y,groups,blocks,components=FALSE){
 
     F_cont_linear = (t(M[1,])%*%Z_i)^2/MSerror
     F_cont_quad = (t(M[2,])%*%Z_i)^2/MSerror
-    F_cont_remain = ((t(Z_i)%*%Z_i - (t(M[1,])%*%Z_i)^2 - (t(M[2,])%*%Z_i)^2)/(t-3))/MSerror
-    if(F_cont_remain < 0) {F_cont_remain = 0}
+
+    if(t <= 3L) {F_cont_remain = 0L} else {
+      F_cont_remain = ((t(Z_i)%*%Z_i - (t(M[1,])%*%Z_i)^2 - (t(M[2,])%*%Z_i)^2)/(t-3))/MSerror
+    }
+
+    if(F_cont_remain < 0L) {F_cont_remain = 0L}
     F_cont_overall = (t(Z_i)%*%(Z_i)/(t-1))/MSerror
 
     F_p_val_overall = pf(q = F_cont_overall,df1 = t-1,df2 = edf,lower.tail = F)

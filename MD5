@@ -1,4 +1,4 @@
-823e97f2b59a4ceefc2137b145d7c7e9 *DESCRIPTION
+57660b1334361c1420fe2d3965af9cf0 *DESCRIPTION
 bc8ff644ab5296d08eaf3e3fb739267a *NAMESPACE
 ed9823a3447e9084b031fe839005a5e3 *R/data_doc_asbestos.R
 98acd383a797e6953ab66fd092976190 *R/data_doc_cereal.R
@@ -28,7 +28,7 @@ ad0af7ac371796eef2cafa9c159b16d6 *R/func_ARL.R
 401955204f81ee92c201cfde18c3c079 *R/func_RL.R
 af67b80ecfda229001f9757cf177e8e0 *R/func_T_Mu.R
 645737b2c64d1156c860f316dbb409b7 *R/func_durbin.R
-1c206904fce7fb584b06eea46e3eaaaf *R/func_friedman.R
+d044ec60adb15f96860a7143da512c8a *R/func_friedman.R
 fc27f6099cd52c63eccd01c5e5ac78cf *R/func_gen_cor.R
 e088c50586ddd4614256fbb907904047 *R/func_mu_r.R
 f11f67308db8dd8761883be87969d358 *R/func_np_anova.R
