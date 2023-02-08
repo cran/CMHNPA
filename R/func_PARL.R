@@ -23,7 +23,7 @@
 #' p-values may also be calculated and shown.
 
 #' @references
-#' Rayner, J.C.W and Livingston, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.
+#' Rayner, J.C.W and Livingston Jr, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.
 #'
 #' @seealso [ARL()] [CARL()]
 #'
@@ -33,6 +33,8 @@
 #' PARL(y = yield, treatment = treatment, block1 = row, block2 = col,
 #' components = TRUE)
 PARL = function(y,treatment,block1,block2,N_perms = 1000,components=FALSE){
+
+  message("This function is still included in this package for compatibility with the book, An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Users should use the CARL function instead.")
 
   y_name = deparse(substitute(y))
   treatment_name = deparse(substitute(treatment))

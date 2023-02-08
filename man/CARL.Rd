@@ -4,7 +4,17 @@
 \alias{CARL}
 \title{CARL Test}
 \usage{
-CARL(y, treatment, block1, block2)
+CARL(
+  y,
+  treatment,
+  block1,
+  block2,
+  n_components = 0,
+  n_permutations = 0,
+  treatment_scores = NULL,
+  sig_digits = 4,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{y}{a numeric vector for the response variable.}
@@ -17,6 +27,16 @@ corresponding elements of \code{y}.}
 
 \item{block2}{a vector giving the second blocking variable for the
 corresponding elements of \code{y}.}
+
+\item{n_components}{the number of polynomial components you wish to test. The maximum number of components is the number of treatments less one. If the number of components requested is less than \code{t-2}, a remainder component is created.}
+
+\item{n_permutations}{the number of permutations you wish to run.}
+
+\item{treatment_scores}{the scores to be applied to the treatment groups. If not declared these will be set automatically and should be checked.}
+
+\item{sig_digits}{the number of significant digits the output should show.}
+
+\item{verbose}{flag for turning on the status bar for permutation tests.}
 }
 \value{
 The \code{CARL} test statistic adjusted for ties together with the

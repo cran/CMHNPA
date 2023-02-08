@@ -24,7 +24,7 @@ are four types of lemonades which are all tasted by five tasters.
 }
 \examples{
 attach(lemonade)
-friedman(y = rank, groups = type, blocks = taster, components = TRUE)
+friedman(y = rank, groups = type, blocks = taster)
 }
 \references{
 Thas, O., Best, D.J. and Rayner, J.C.W. (2012). Using orthogonal trend contrasts for testing ranked data with ordered alternatives. Statisticia Neerlandica, 66(4), 452-471.

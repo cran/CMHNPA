@@ -22,5 +22,5 @@
 #'
 #' @examples
 #' attach(lemonade)
-#' friedman(y = rank, groups = type, blocks = taster, components = TRUE)
+#' friedman(y = rank, groups = type, blocks = taster)
 "lemonade"

@@ -17,7 +17,6 @@
 #' corresponding elements of \code{y}.
 #' @param block2 a vector giving the second blocking variable for the
 #' corresponding elements of \code{y}.
-#'
 #' @return A list containing the ARL test statistic adjusted for ties together
 #' with the associated p-value using a chi-squared distribution with t-1 degrees
 #' of freedom.
@@ -35,6 +34,8 @@
 #'
 #' @export
 ARL = function(y,treatment,block1,block2){
+
+  message("This function is still included in this package for compatibility with the book, An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Users should use the CARL function instead.")
 
   t = sqrt(length(y))
   row.col.effects = row_col_effect(to_align = y, rows = block1,

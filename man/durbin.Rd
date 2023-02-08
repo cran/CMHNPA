@@ -4,7 +4,16 @@
 \alias{durbin}
 \title{Durbin Test}
 \usage{
-durbin(y, groups, blocks, components = FALSE)
+durbin(
+  y,
+  groups,
+  blocks,
+  n_components = 0,
+  n_permutations = 0,
+  group_scores = NULL,
+  sig_digits = 4,
+  verbose = FALSE
+)
 }
 \arguments{
 \item{y}{a numeric vector for the response variable.}
@@ -15,11 +24,18 @@ durbin(y, groups, blocks, components = FALSE)
 \item{blocks}{a vector giving the block for the corresponding elements of
 \code{y}.}
 
-\item{components}{a TRUE or FALSE flag to indicate if chi-squared or F
-orthogonal component p-values are wanted.}
+\item{n_components}{the number of polynomial components you wish to test. The maximum number of components is the number of groups less one. If the number of components requested is less than \code{t-2}, a remainder component is created.}
+
+\item{n_permutations}{the number of permutations you wish to run.}
+
+\item{group_scores}{the scores to be applied to the groups. If not declared these will be set automatically and should be checked.}
+
+\item{sig_digits}{the number of significant digits the output should show.}
+
+\item{verbose}{flag for turning on the status bar for permutation tests.}
 }
 \value{
-The Durbin test adjusted for ties results.
+The Durbin test adjusted for tied results.
 }
 \description{
 \code{durbin} returns the results of Durbin's Rank Sum test.
@@ -29,7 +45,7 @@ The test is a generalisation of Friedman's test that can be applied to BIBD.
 }
 \examples{
 attach(icecream)
-durbin(y = rank, groups = variety, blocks = judge, components = TRUE)
+durbin(y = rank, groups = variety, blocks = judge)
 }
 \references{
 Rayner, J.C.W and Livingston, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.

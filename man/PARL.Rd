@@ -41,7 +41,7 @@ PARL(y = yield, treatment = treatment, block1 = row, block2 = col,
 components = TRUE)
 }
 \references{
-Rayner, J.C.W and Livingston, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.
+Rayner, J.C.W and Livingston Jr, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.
 }
 \seealso{
 \code{\link[=ARL]{ARL()}} \code{\link[=CARL]{CARL()}}

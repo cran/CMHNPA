@@ -4,12 +4,30 @@
 \alias{KW}
 \title{KW}
 \usage{
-KW(treatment, response)
+KW(
+  treatment,
+  response,
+  n_components = 0,
+  n_permutations = 0,
+  treatment_scores = NULL,
+  sig_digits = 4,
+  verbose = FALSE
+)
 }
 \arguments{
-\item{treatment}{a factor that fedines the group the response belongs to.}
+\item{treatment}{a factor that defines the group the response belongs to.}
 
 \item{response}{a numeric variable measuring the response outcome.}
+
+\item{n_components}{the number of polynomial components you wish to test. The maximum number of components is the number of treatments less one. If the number of components requested is less than \code{t-2}, a remainder component is created.}
+
+\item{n_permutations}{the number of permutations you wish to run.}
+
+\item{treatment_scores}{the scores to be applied to the treatment groups. If not declared these will be set automatically and should be checked.}
+
+\item{sig_digits}{the number of significant digits the output should show.}
+
+\item{verbose}{flag for turning on the status bar for permutation tests.}
 }
 \value{
 The function returns the test result of the Kruskal Wallis test with
@@ -27,5 +45,5 @@ attach(whiskey)
 KW(treatment = maturity, response = grade)
 }
 \references{
-Rayner, J.C.W and Livingston, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.
+Rayner, J.C.W and Livingston Jr, G. C. (2022). An Introduction to Cochran-Mantel-Haenszel Testing and Nonparametric ANOVA. Wiley.
 }
